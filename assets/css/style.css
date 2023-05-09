@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.screenResult {
+    font-size: 30px;
+    display: flex;
+    margin-top: 20px;
+    width: 400px;
+    height: 50px;
+    background-color: rgb(198, 214, 228);
+    border-radius: 10px;
+}
+
+.screenResult p{
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    margin: 10px;
+}
+
+
+
+
+.button button{
+    font-size: 25px;
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 100px;
+    background-color: rgb(236, 236, 236);
+}
+
+.button button:hover {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 100px;
+    background-color: rgb(240, 193, 106);
+}
+
+#equal, #cancel, #zero{
+    font-size: 25px;
+    width: 200px;
+    height: 100px;
+    border: none;
+    border-radius: 100px;
+    background-color: rgb(236, 236, 236);
+}
