@@ -21,6 +21,7 @@ let nb2 = document.getElementById("nb2")
 let nb1 = document.getElementById("nb1")
 // On définit l'affichage par defaut
 let display = nb1
+let virgule = 0
 
 zero.addEventListener("click", function () {
     display.innerText += zero.innerText
@@ -63,27 +64,37 @@ nine.addEventListener("click", function () {
 })
 
 comma.addEventListener("click", function () {
-    display.innerText += comma.innerText
+    if (virgule == 0) {
+        display.innerText += comma.innerText
+        virgule++
+    }
+
+
+
 })
 
 plus.addEventListener("click", function () {
     display = nb2
-    ope.innerText += plus.innerText
+    virgule = 0
+    ope.innerText = plus.innerText
 })
 
 minus.addEventListener("click", function () {
     display = nb2
-    ope.innerText += minus.innerText
+    virgule = 0
+    ope.innerText = minus.innerText
 })
 
 divide.addEventListener("click", function () {
     display = nb2
-    ope.innerText += divide.innerText
+    virgule = 0
+    ope.innerText = divide.innerText
 })
 
 multiply.addEventListener("click", function () {
     display = nb2
-    ope.innerText += multiply.innerText
+    virgule = 0
+    ope.innerText = multiply.innerText
 })
 
 equal.addEventListener("click", function () {
@@ -107,7 +118,12 @@ equal.addEventListener("click", function () {
     result.innerText = resultat
 })
 
-cancel.addEventListener("click", function(){
-    
+cancel.addEventListener("click", function () {
+    nb1.innerText = ""
+    nb2.innerText = ""
+    ope.innerText = ""
+    result.innerText = ""
+    virgule = 0
+    display = nb1
 })
 
