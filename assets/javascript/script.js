@@ -19,72 +19,95 @@ let result = document.getElementById("result")
 let ope = document.getElementById("ope")
 let nb2 = document.getElementById("nb2")
 let nb1 = document.getElementById("nb1")
+// On définit l'affichage par defaut
 let display = nb1
 
-zero.addEventListener("click", function(){
+zero.addEventListener("click", function () {
     display.innerText += zero.innerText
 })
 
-one.addEventListener("click", function(){
+one.addEventListener("click", function () {
     display.innerText += one.innerText
 })
 
-two.addEventListener("click", function(){
+two.addEventListener("click", function () {
     display.innerText += two.innerText
 })
 
-three.addEventListener("click", function(){
+three.addEventListener("click", function () {
     display.innerText += three.innerText
 })
 
-four.addEventListener("click", function(){
+four.addEventListener("click", function () {
     display.innerText += four.innerText
 })
 
-five.addEventListener("click", function(){
+five.addEventListener("click", function () {
     display.innerText += five.innerText
 })
 
-six.addEventListener("click", function(){
+six.addEventListener("click", function () {
     display.innerText += six.innerText
 })
 
-seven.addEventListener("click", function(){
+seven.addEventListener("click", function () {
     display.innerText += seven.innerText
 })
 
-eight.addEventListener("click", function(){
+eight.addEventListener("click", function () {
     display.innerText += eight.innerText
 })
 
-nine.addEventListener("click", function(){
+nine.addEventListener("click", function () {
     display.innerText += nine.innerText
 })
 
-comma.addEventListener("click", function(){
+comma.addEventListener("click", function () {
     display.innerText += comma.innerText
 })
 
-plus.addEventListener("click", function(){
+plus.addEventListener("click", function () {
+    display = nb2
     ope.innerText += plus.innerText
 })
 
-minus.addEventListener("click", function(){
+minus.addEventListener("click", function () {
+    display = nb2
     ope.innerText += minus.innerText
 })
 
-divide.addEventListener("click", function(){
+divide.addEventListener("click", function () {
+    display = nb2
     ope.innerText += divide.innerText
 })
 
-multiply.addEventListener("click", function(){
+multiply.addEventListener("click", function () {
+    display = nb2
     ope.innerText += multiply.innerText
 })
 
-ope.addEventListener("click", function(){
-    nb2.innerText += one.innerText
+equal.addEventListener("click", function () {
+    let resultat = 0
+    switch (ope.innerText) {
+        case "+":
+            resultat = parseFloat(nb1.innerText) + parseFloat(nb2.innerText);
+            break;
+        case "-":
+            resultat = parseFloat(nb1.innerText) - parseFloat(nb2.innerText);
+            break;
+        case "x":
+            resultat = parseFloat(nb1.innerText) * parseFloat(nb2.innerText);
+            break;
+        case "/":
+            resultat = parseFloat(nb1.innerText) / parseFloat(nb2.innerText);
+            break;
+        default:
+            resultat = 0
+    }
+    result.innerText = resultat
 })
 
-
-
+cancel.addEventListener("click", function(){
+    
+})
 
